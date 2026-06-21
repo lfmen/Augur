@@ -3,6 +3,10 @@ import os
 import pandas as pd
 import json
 import re
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 from src.augur.scrapers.indec_api import get_indec_data
 from src.augur.scrapers.bcra_api import get_bcra_data
 from src.augur.scrapers.mercados_opinion import get_mercados_opinion_data
@@ -111,6 +115,38 @@ def run_pipeline():
             
         history_df.to_csv(history_path, index=False)
         logger.info("Registro de probabilidad guardado en predictions_history.csv")
+        
+        # --- Generación de Gráfico Histórico ---
+        try:
+            history_df['Mes_Actual'] = pd.to_datetime(history_df['Mes_Actual'])
+            plot_df = history_df.sort_values('Fecha_Ejecucion').groupby('Mes_Actual').tail(1).set_index('Mes_Actual')
+            
+            plt.figure(figsize=(10, 5), facecolor='#ffffff')
+            ax = plt.gca()
+            ax.set_facecolor('#ffffff')
+            
+            plt.plot(plot_df.index, plot_df['Indice_Viabilidad'] * 100, 
+                     marker='o', linestyle='-', color='#0071C5', linewidth=2.5, markersize=8)
+            
+            plt.title('Evolución Histórica del Índice de Viabilidad', fontsize=14, fontweight='bold', pad=15)
+            plt.ylabel('Viabilidad (%)', fontsize=12)
+            plt.grid(True, linestyle='--', alpha=0.5)
+            
+            ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+            plt.xticks(rotation=45)
+            
+            plt.fill_between(plot_df.index, plot_df['Indice_Viabilidad'] * 100, 0, color='#0071C5', alpha=0.1)
+            
+            plt.ylim(0, 100)
+            plt.tight_layout()
+            
+            os.makedirs("assets", exist_ok=True)
+            plt.savefig("assets/history_chart.png", dpi=150, bbox_inches='tight')
+            plt.close()
+            logger.info("Gráfico histórico generado en assets/history_chart.png")
+        except Exception as e:
+            logger.error(f"Error generando gráfico histórico: {e}")
+        # ---------------------------------------
         
         # Clasificar la viabilidad sin emojis ni slop
         if current_score >= 0.65:

@@ -21,12 +21,16 @@ En este proyecto, **Augur** funciona como una analogía moderna: en lugar de obs
 ## Estado Actual del Índice
 
 <!-- PREDICTION_START -->
-**Índice de Viabilidad de Reelección:** 73.5%
+**Índice de Viabilidad de Reelección:** 71.0%
 
 **Análisis:** Viabilidad Alta. El entorno macroeconómico actual es altamente favorable. La combinación de baja inflación y brecha con buena aprobación empujan el índice al alza.
 
-*(Última actualización: 2026-06-21 11:20)*
+*(Última actualización: 2026-06-21 16:40)*
 <!-- PREDICTION_END -->
+
+<p align="center">
+  <img src="assets/history_chart.png" alt="Evolución Histórica del Índice" width="800"/>
+</p>
 
 ---
 
