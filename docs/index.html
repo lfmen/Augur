@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUGUR | Índice de Viabilidad Presidencial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ambient-light"></div>
+
+    <header>
+        <h1 class="roman-header">Augur</h1>
+        <div class="subtitle">Índice Cuantitativo Determinístico para la Proyección de Viabilidad de Reelección</div>
+    </header>
+
+    <main class="dashboard">
+        
+        <!-- Center Column: The Coin / Score -->
+        <section class="glass-panel central-plate">
+            <h2 class="panel-title">Proyección de Reelección</h2>
+            <div class="score-container">
+                <svg class="progress-ring" width="260" height="260">
+                    <circle class="progress-ring__circle-bg" stroke="var(--panel-border)" stroke-width="8" fill="transparent" r="110" cx="130" cy="130"/>
+                    <circle class="progress-ring__circle" stroke="var(--text-primary)" stroke-width="8" fill="transparent" r="110" cx="130" cy="130" stroke-linecap="round"/>
+                </svg>
+                <div class="score-value">
+                    <span id="viability-score">--%</span>
+                    <span class="score-label">VIABILIDAD</span>
+                </div>
+            </div>
+            <div class="update-info">
+                <span>Última actualización: </span>
+                <span id="update-date">Cargando...</span>
+            </div>
+        </section>
+
+        <!-- Left Column: Confidence Variables -->
+        <aside class="glass-panel column-left">
+            <h2 class="panel-title">Variables de Confianza</h2>
+            
+            <div class="data-point">
+                <div class="data-header">
+                    <span class="data-label">Aprobación (ICG)</span>
+                    <span id="icg-value" class="data-value">--</span>
+                </div>
+                <div class="meter-container"><div class="meter-fill" id="icg-meter"></div></div>
+            </div>
+
+            <div class="data-point">
+                <div class="data-header">
+                    <span class="data-label">Confianza Consumidor (ICC)</span>
+                    <span id="icc-value" class="data-value">--</span>
+                </div>
+                <div class="meter-container"><div class="meter-fill" id="icc-meter"></div></div>
+            </div>
+        </aside>
+
+        <!-- Right Column: Macro Indicators Grid -->
+        <aside class="glass-panel column-right">
+            <h2 class="panel-title">Indicadores Macroeconómicos</h2>
+            <div class="indicators-grid">
+                
+                <div class="indicator-card">
+                    <div class="indicator-title">Inflación (IPC)</div>
+                    <div class="indicator-value" id="ipc-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Aceleración Infl.</div>
+                    <div class="indicator-value" id="acel-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Brecha Cambiaria</div>
+                    <div class="indicator-value" id="brecha-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Salario Real</div>
+                    <div class="indicator-value" id="salario-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Empleo Privado</div>
+                    <div class="indicator-value" id="empleo-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Reservas (RIN)</div>
+                    <div class="indicator-value" id="rin-value">--</div>
+                </div>
+
+                <div class="indicator-card">
+                    <div class="indicator-title">Resultado Fiscal</div>
+                    <div class="indicator-value" id="fiscal-value">--</div>
+                </div>
+                
+                <div class="indicator-card">
+                    <div class="indicator-title">Actividad (EMAE)</div>
+                    <div class="indicator-value" id="emae-value">--</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Bottom Row: Analysis -->
+        <section class="analysis-panel glass-panel">
+            <h2 class="analysis-title">Diagnóstico del Modelo</h2>
+            <div id="opinion-title" class="opinion-heading"></div>
+            <div id="opinion-text" class="opinion-body">
+                Analizando el entorno macroeconómico...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>AUGUR &bull; MODELO CUANTITATIVO &bull; REPÚBLICA ARGENTINA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

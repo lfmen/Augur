@@ -1,0 +1,20 @@
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Datos generados por el modelo (opcional excluir)
+data/indec_raw.csv
+data/bcra_raw.csv
+data/mercados_opinion_raw.csv
+data/dataset_procesado.csv
+data/feature_importance.csv
+
+# Logs y SO
+*.log
+.DS_Store
