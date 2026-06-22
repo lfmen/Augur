@@ -3,9 +3,9 @@
   <h1>Augur: Índice de Viabilidad Presidencial</h1>
   <p><i>Sistema Cuantitativo Determinístico para la Proyección de Viabilidad de Reelección en Argentina</i></p>
   
-  [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-  [![License: All Rights Reserved](https://img.shields.io/badge/License-All_Rights_Reserved-red.svg)](LICENSE)
-  [![CI/CD](https://github.com/lfmen/Augur/actions/workflows/daily_prediction.yml/badge.svg)](https://github.com/lfmen/Augur/actions)
+  [![Python 3.12+](https://img.shields.io/badge/python-3.12+-red.svg?style=flat-square)](https://www.python.org/downloads/)
+  [![License: All Rights Reserved](https://img.shields.io/badge/License-All_Rights_Reserved-red.svg?style=flat-square)](LICENSE)
+  [![CI/CD](https://img.shields.io/github/actions/workflow/status/lfmen/Augur/daily_prediction.yml?style=flat-square&color=red)](https://github.com/lfmen/Augur/actions)
 </div>
 
 <br />
