@@ -1,19 +1,19 @@
 {
-    "timestamp": "2026-07-22 10:29",
+    "timestamp": "2026-07-23 10:27",
     "date": "2026-07-01",
-    "viability_score": 0.6597713343294914,
-    "opinion": "Viabilidad Alta. El entorno macroeconómico actual es altamente favorable. La combinación de baja inflación y brecha con buena aprobación empujan el índice al alza.",
+    "viability_score": 0.6407867007745544,
+    "opinion": "Viabilidad Media (Escenario Competitivo). Las variables muestran un cuadro mixto. Hay estabilidad en algunos frentes, pero debilidad en otros.",
     "variables": {
         "ICG_Aprobacion": 2.07,
         "ICC_Nivel": 37.555492861023914,
         "IPC_BCRA": 1.8868714688293764,
         "IPC_Delta_1M": -0.2631008661614809,
         "Salario_Delta_1M": -1.459124614575824,
-        "Empleo_Delta_1M": null,
-        "Brecha_Cambiaria": 3.1375166889185513,
-        "RIN_Est_USD": 36496.0,
-        "Resultado_Financiero_Millones": 506761.1999999997,
-        "EMAE_Delta_1M": 0.9853259836295258,
+        "Empleo_Delta_1M": -0.1898463355493707,
+        "Brecha_Cambiaria": 3.5286284953395475,
+        "RIN_Est_USD": 36511.0,
+        "Resultado_Financiero_Millones": 505785.6000000001,
+        "EMAE_Delta_1M": 2.3911080712890387,
         "IVS": null
     }
 }
