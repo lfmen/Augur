@@ -21,11 +21,11 @@ En este proyecto, **Augur** funciona como una analogía moderna: en lugar de obs
 ## Estado Actual del Índice
 
 <!-- PREDICTION_START -->
-**Índice de Viabilidad de Reelección:** 64.1%
+**Índice de Viabilidad de Reelección:** 63.7%
 
 **Análisis:** Viabilidad Media (Escenario Competitivo). Las variables muestran un cuadro mixto. Hay estabilidad en algunos frentes, pero debilidad en otros.
 
-*(Última actualización: 2026-07-23 10:27)*
+*(Última actualización: 2026-07-24 10:23)*
 <!-- PREDICTION_END -->
 
 <p align="center">
